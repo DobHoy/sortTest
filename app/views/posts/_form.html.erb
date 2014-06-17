@@ -15,17 +15,18 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </div>
+
   <%= f.fields_for :comments do |builder| %>
- 
-  <div class="field">
-    <%= builder.label :name %><br />
-    <%= builder.text_field :name %>
-  </div>
-<% end -%>
+    <div class="field">
+      <%= builder.label :content %><br />
+      <%= builder.text_field :content %>
+    </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit %>
